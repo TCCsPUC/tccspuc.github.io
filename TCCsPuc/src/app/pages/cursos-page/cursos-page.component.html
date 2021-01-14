@@ -1,0 +1,9 @@
+<div class="card-columns">
+    <div class="card" *ngFor="let curso of cursos">
+        <div class="card-body">
+            <h5 class="card-title">{{curso.Nome}}</h5>
+            <p class="card-text">{{curso.Ano}}</p>
+            <a class="btn btn-primary" (click)="onVerClick('curso')">Ver</a>
+        </div>
+    </div>
+</div>
