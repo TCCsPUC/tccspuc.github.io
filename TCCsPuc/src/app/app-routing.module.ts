@@ -10,11 +10,11 @@ const routes: Routes = [
     component: HomePageComponent
   },
   {
-    path: "cursos",
+    path: "cursos/:tipo",
     component: CursosPageComponent
   },
   {
-    path: "trabalhos",
+    path: "trabalhos/:curso",
     component: TrabalhosPageComponent
   }
 ];

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Curso } from '../../domain/curso';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { AnimationOptions } from 'ngx-lottie';
 import { CursoService } from '../../services/curso.service';
 
 @Component({
@@ -11,15 +11,26 @@ import { CursoService } from '../../services/curso.service';
 export class CursosPageComponent implements OnInit {
 
   public cursos;
+  public tipoCurso;
 
-  constructor(private router: Router, private cursoService: CursoService) { }
+  options: AnimationOptions = {
+    path: '/assets/emptybox.json',
+  };
+
+  constructor(private router: Router, private cursoService: CursoService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.cursos =  this.cursoService.Get();
+    this.obterParametros();
+    this.cursos = this.cursoService.Get(this.tipoCurso);
   }
 
   public onVerClick(curso) {
-    debugger;
-    this.router.navigate(['/trabalhos']);
+    this.router.navigate(['trabalhos', curso]);
+  }
+
+  private obterParametros() {
+    this.activatedRoute.params.subscribe((params: Params) => {
+      this.tipoCurso = params['tipo'];
+    });
   }
 }

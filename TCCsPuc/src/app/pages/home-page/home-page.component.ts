@@ -14,7 +14,7 @@ export class HomePageComponent implements OnInit {
   }
 
   public onMenuClick(modulo) {
-    this.router.navigate([modulo]);
+    this.router.navigate(['cursos', modulo]);
   }
 
 }

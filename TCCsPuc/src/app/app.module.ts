@@ -9,6 +9,13 @@ import { TrabalhosPageComponent } from './pages/trabalhos-page/trabalhos-page.co
 import { CursoService } from './services/curso.service';
 import { TrabalhoService } from './services/trabalho.service';
 
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
+
+export function playerFactory() {
+  return player;
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +25,8 @@ import { TrabalhoService } from './services/trabalho.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    [LottieModule.forRoot({ player: playerFactory })]
   ],
   providers: [CursoService, TrabalhoService],
   bootstrap: [AppComponent]

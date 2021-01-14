@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 import { TrabalhoService } from '../../services/trabalho.service';
 
 @Component({
@@ -9,10 +10,18 @@ import { TrabalhoService } from '../../services/trabalho.service';
 export class TrabalhosPageComponent implements OnInit {
 
   public trabalhos;
+  public curso;
 
-  constructor(private trabalhoService: TrabalhoService) { }
+  constructor(private trabalhoService: TrabalhoService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.obterParametros();
     this.trabalhos =  this.trabalhoService.Get();
+  }
+
+  private obterParametros() {
+    this.activatedRoute.params.subscribe((params: Params) => {
+      this.curso = params['curso'];
+    });
   }
 }
