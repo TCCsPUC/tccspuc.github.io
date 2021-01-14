@@ -1,14 +1,14 @@
-<div class="card-columns" *ngIf="cursos.length > 0; else semCursosBlock">
+<div class="card-columns" *ngIf="cursos.length > 0; else nadaEncontradoBlock">
     <div class="card" *ngFor="let curso of cursos">
         <div class="card-body">
             <h5 class="card-title">{{curso.Nome}}</h5>
             <p class="card-text">{{curso.Ano}}</p>
-            <a class="btn btn-primary" (click)="onVerClick('curso')">Ver</a>
+            <a class="btn btn-primary" (click)="onVerClick(curso.GUID)">Ver</a>
         </div>
     </div>
 </div>
 
-<ng-template #semCursosBlock>
+<ng-template #nadaEncontradoBlock>
     <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
     <label>Nenhum curso encontrado!</label>
 </ng-template>

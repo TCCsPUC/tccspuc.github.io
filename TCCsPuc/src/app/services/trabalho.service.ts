@@ -7,7 +7,13 @@ export class TrabalhoService {
     constructor() {
     }
 
-    public Get() {
+    public GetAll() {
         return trabalhos;
+    }
+
+    public Get(curso) {
+        let trabalhosFiltrados = this.GetAll().filter(x => x.Curso === curso);
+        
+        return trabalhosFiltrados;
     }
 }
