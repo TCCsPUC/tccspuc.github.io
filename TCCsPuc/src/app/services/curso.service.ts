@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Curso } from "../domain/curso";
-import { Trabalho } from "../domain/trabalho";
+import cursos from './../../cursos.json';
 
 @Injectable()
 export class CursoService {
@@ -9,11 +9,6 @@ export class CursoService {
     }
 
     public GetAll() {
-        let cursos: Array<Curso> = [];
-
-        cursos.push(new Curso("Sistemas de Informação", 2016, "graduacao"))
-        cursos.push(new Curso("Arquitetura de Software Distribuído", 2020, "posgraduacaols"))
-
         return cursos;
     }
 
@@ -22,7 +17,6 @@ export class CursoService {
 
         cursos = this.GetAll().filter(x => x.Tipo === tipoCurso);
 
-        debugger;
         return cursos;
     }
 }

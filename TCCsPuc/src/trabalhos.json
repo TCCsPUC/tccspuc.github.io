@@ -1,0 +1,20 @@
+[
+    {
+        "Curso": "asd",
+        "Titulo": "Sistema de Gestão Ambiental para Empresas de Mineração",
+        "Descricao": "- - -",
+        "Ano": 2020,
+        "URI": "https://github.com/TCCsPUC/Cursos/blob/main/PosGraduacao/ArquiteturaSoftwareDistribuido/2020/TCC%20-%20Guilherme%20Nunes%20Fontans.pdf",
+        "Autores": "Guilherme Nunes Fontans",
+        "Nota": null
+    },
+    {
+        "Curso": "asd",
+        "Titulo": "Sistema Integrado de Gestão de Qualidade Voltado ao Ramo Automotivo",
+        "Descricao": "- - -",
+        "Ano": 2020,
+        "URI": "https://github.com/TCCsPUC/Cursos/blob/main/PosGraduacao/ArquiteturaSoftwareDistribuido/2020/TCC%20ANDRE%20LOPES%20RUSSO_e_VINICIUS_LOPES_RUSSO.pdf",
+        "Autores": "ANDRE LOPES RUSSO e VINICIUS LOPES RUSSO",
+        "Nota": null
+    }
+]
