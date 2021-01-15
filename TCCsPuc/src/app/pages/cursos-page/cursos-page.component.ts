@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { AnimationOptions } from 'ngx-lottie';
 import { CursoService } from '../../services/curso.service';
+import { TrabalhoService } from '../../services/trabalho.service';
 import { DataTablesOptions } from '../../utils/data-tables-utils';
-import { Subject } from 'rxjs';
 import { Preferences } from '../../utils/preferences';
 
 @Component({
@@ -23,15 +23,20 @@ export class CursosPageComponent implements OnInit {
 
   dtOptions: any;
 
-  constructor(private router: Router, private cursoService: CursoService, private activatedRoute: ActivatedRoute) { }
+  constructor(private router: Router, private cursoService: CursoService,
+    private trabalhoService: TrabalhoService,
+    private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.mostrarTabela = Preferences.ObterPreferenciaExibicao();
 
     this.dtOptions = DataTablesOptions.PortuguesBrasil;
     this.obterParametros();
-    this.cursos = this.cursoService.Get(this.tipoCurso);
+    this.cursos = this.cursoService.Obter(this.tipoCurso);
 
+    this.cursos.forEach((value, index) => {
+      value.Versoes = this.trabalhoService.ObterVersoes(value.GUID);
+    });
   }
 
   public onVerClick(curso) {

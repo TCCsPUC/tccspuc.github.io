@@ -2,13 +2,11 @@
     {
         "GUID": "si",
         "Nome": "Sistemas de Informação",
-        "Ano": 2016,
         "Tipo": "graduacao"
     },
     {
         "GUID": "asd",
         "Nome": "Arquitetura de Software Distribuído",
-        "Ano": 2020,
         "Tipo": "posgraduacaols"
     }
 ]

@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import trabalhos from './../../trabalhos.json';
+import trabalhos from './../../data/trabalhos.json';
 
 @Injectable()
 export class TrabalhoService {
@@ -7,13 +7,18 @@ export class TrabalhoService {
     constructor() {
     }
 
-    public GetAll() {
+    public ObterTodos() {
         return trabalhos;
     }
 
-    public Get(curso) {
-        let trabalhosFiltrados = this.GetAll().filter(x => x.Curso === curso);
-        
+    public Obter(curso) {
+        let trabalhosFiltrados = this.ObterTodos().filter(x => x.Curso === curso);
         return trabalhosFiltrados;
+    }
+
+    public ObterVersoes(curso) {
+        let trabalhosFiltrados = this.Obter(curso);
+
+        return trabalhosFiltrados.map(x => x.Ano).filter((value, index, self) => self.indexOf(value) === index)
     }
 }

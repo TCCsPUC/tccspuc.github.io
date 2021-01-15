@@ -8,18 +8,16 @@
         <table datatable [dtOptions]="dtOptions" class="table table-striped table-sm">
             <thead>
                 <tr>
-                    <th>#</th>
-                    <th>Titulo</th>
-                    <th>Descrição</th>
-                    <th>URL</th>
+                    <th>Curso</th>
+                    <th>Versoes</th>
+                    <th>Ver</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let curso of cursos">
                     <td>{{curso.Nome}}</td>
-                    <td>{{curso.Nome}}</td>
-                    <td>{{curso.Nome}}</td>
-                    <td>tests
+                    <td>{{curso.Versoes}}</td>
+                    <td><a class="btn btn-primary" (click)="onVerClick(curso.GUID)">Ver</a>
                     </td>
                 </tr>
             </tbody>
@@ -31,7 +29,7 @@
             <div class="card" *ngFor="let curso of cursos">
                 <div class="card-body">
                     <h5 class="card-title">{{curso.Nome}}</h5>
-                    <p class="card-text">{{curso.Ano}}</p>
+                    <p class="card-text">{{curso.Versoes}}</p>
                     <a class="btn btn-primary" (click)="onVerClick(curso.GUID)">Ver</a>
                 </div>
             </div>

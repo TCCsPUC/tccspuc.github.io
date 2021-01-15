@@ -14,7 +14,16 @@
         "Descricao": "- - -",
         "Ano": 2020,
         "URI": "https://github.com/TCCsPUC/Cursos/blob/main/PosGraduacao/ArquiteturaSoftwareDistribuido/2020/TCC%20ANDRE%20LOPES%20RUSSO_e_VINICIUS_LOPES_RUSSO.pdf",
-        "Autores": "ANDRE LOPES RUSSO e VINICIUS LOPES RUSSO",
+        "Autores": "Andre Lopes Russo e Vinicius Lopes Russo",
+        "Nota": null
+    },
+    {
+        "Curso": "asd",
+        "Titulo": "Sistema para Aquisição de Cupom Promocional",
+        "Descricao": "- - -",
+        "Ano": 2019,
+        "URI": "https://github.com/TCCsPUC/Cursos/blob/main/PosGraduacao/ArquiteturaSoftwareDistribuido/2019/TCC%20-%20Renan%20Stuchi%20-projeto%20arquitetural%202018.pdf",
+        "Autores": "Renan Stuchi",
         "Nota": null
     }
 ]
