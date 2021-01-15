@@ -1,9 +1,9 @@
-<div class="btn-group mb-4" role="group">
-    <button type="button" class="btn btn-secondary" (click)="onAlterarVisualizacao(false)">Exibir como cartões</button>
-    <button type="button" class="btn btn-secondary" (click)="onAlterarVisualizacao(true)">Exibir como tabela</button>
-</div>
-
 <div *ngIf="trabalhos.length > 0; else nadaEncontradoBlock">
+
+    <div class="btn-group mb-4" role="group">
+        <button type="button" class="btn btn-secondary" (click)="onAlterarVisualizacao(false)">Exibir como cartões</button>
+        <button type="button" class="btn btn-secondary" (click)="onAlterarVisualizacao(true)">Exibir como tabela</button>
+    </div>
 
     <div class="table-responsive" *ngIf="mostrarTabela; else cardsBlock">
         <table datatable [dtOptions]="dtOptions" class="table table-striped table-sm">
