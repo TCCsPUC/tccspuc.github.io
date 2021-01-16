@@ -25,5 +25,23 @@
         "URI": "https://github.com/TCCsPUC/Cursos/blob/main/PosGraduacao/ArquiteturaSoftwareDistribuido/2019/TCC%20-%20Renan%20Stuchi%20-projeto%20arquitetural%202018.pdf",
         "Autores": "Renan Stuchi",
         "Nota": null
+    },
+    {
+        "Curso": "asd",
+        "Titulo": "Plataforma Integrada de Comércio Eletrônico Baseado em Dropshipping",
+        "Descricao": "- - -",
+        "Ano": 2018,
+        "URI": "https://github.com/TCCsPUC/Cursos/blob/main/PosGraduacao/ArquiteturaSoftwareDistribuido/2018/Projeto%20Arquitetural.pdf",
+        "Autores": "Yago Henrique Ferreira",
+        "Nota": null
+    },
+    {
+        "Curso": "si",
+        "Titulo": "Projeto e Desenvolvimento de um Arcabouço de Agente de Conversação Aplicado ao Curso de Sistemas de Informação da Pontifícia Universidade Católica de Minas Gerais",
+        "Descricao": "- - -",
+        "Ano": 2016,
+        "URI": "https://github.com/TCCsPUC/Cursos/blob/main/Graduacao/2016/SistemasInformacao/HITALO%20ARAUJO%20PROJETO%20E%20DESENVOLVIMENTO%20DE%20UM%20ARCABOU%C3%87O%20DE%20AGENTE%20DE%20CONVERSA%C3%87%C3%83O%20-%2011%20(1).pdf",
+        "Autores": "Hitalo Filipe Silva de Araujo",
+        "Nota": null
     }
 ]

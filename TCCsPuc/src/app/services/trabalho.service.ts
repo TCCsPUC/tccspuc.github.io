@@ -13,6 +13,7 @@ export class TrabalhoService {
 
     public Obter(curso) {
         let trabalhosFiltrados = this.ObterTodos().filter(x => x.Curso === curso);
+        
         return trabalhosFiltrados;
     }
 

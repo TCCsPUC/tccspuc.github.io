@@ -31,7 +31,7 @@
             <div class="card" *ngFor="let trabalho of trabalhos">
                 <div class="card-body">
                     <h5 class="card-title">{{trabalho.Titulo}}</h5>
-                    <p class="card-text">{{trabalho.Ano}}</p>
+                    <p class="card-text">{{trabalho.Ano}} - {{trabalho.Autores}}</p>
                     <a class="btn btn-primary" href="{{trabalho.URI}}" target="_BLANK">Ver</a>
                 </div>
             </div>
